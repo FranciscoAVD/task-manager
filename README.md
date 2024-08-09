@@ -13,5 +13,5 @@ Create a .env.local file for Clerk and paste your own credentials.
 
 ## Docker
 
-Run docker compose up to create you container run it.
+Run docker compose up to create you container and run it.
 Note: You need docker desktop running.
