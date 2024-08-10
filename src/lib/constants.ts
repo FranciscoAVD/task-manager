@@ -1,0 +1,1 @@
+export const LOCAL_STORAGE_TABLE_VIEW = "ACTIVE_TABLE_VIEW" as const
