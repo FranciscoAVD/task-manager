@@ -4,7 +4,7 @@ import { Sidebar } from "./_components/sidebar";
 
 export default function DashboardPage() {
   return (
-    <main className="grow grid grid-cols-[255px_1fr]">
+    <main className="grow xl:grid xl:grid-cols-[255px_1fr]">
       <section className="border">
         <Sidebar />
       </section>
