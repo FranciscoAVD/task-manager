@@ -18,7 +18,7 @@ Note: You need docker desktop running.
 
 ## Git Workflow
 
-1. Create a branch with your specific task. 
+1. Create a branch for your specific task. 
     - `git checkout -b <branch_name>`
     - `git push -u origin <branch_name>`
 2. Make sure you are working on the latest version of the main branch by pulling often.
