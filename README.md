@@ -22,4 +22,5 @@ Note: You need docker desktop running.
     - `git checkout -b <branch_name>`
     - `git push -u origin <branch_name>`
 2. Make sure you are working on the latest version of the main branch by pulling often.
-3. For these independent tasks, we will be rebasing onto the main branch. These will be reviewed by at least one other person.
+3. Write your commits in the following format when applicable: `git commit <file> -m "<name or handle>: Created X component with Y functionality to be integrated with Z component"`
+4. For these independent tasks, we will be rebasing onto the main branch. These will be reviewed by at least one other person.
