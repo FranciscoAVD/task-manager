@@ -1,5 +1,3 @@
 export default function DashboardHeader() {
-  return (
-    <header className="p-4 border">Dashboard header</header>
-  )
+  return <header className="border p-4">Dashboard header</header>;
 }
