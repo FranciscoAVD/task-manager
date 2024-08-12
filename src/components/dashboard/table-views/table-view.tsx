@@ -6,13 +6,35 @@ conflict with other files*/
 
 "use client";
 
-import { useState, useEffect } from "react";
+import {
+  Columns2Icon,
+  ListIcon,
+  CalendarIcon,
+  LucideProps,
+  PlusIcon,
+} from "lucide-react";
+import {
+  useState,
+  useEffect,
+  ForwardRefExoticComponent,
+  RefAttributes,
+} from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { LOCAL_STORAGE_TABLE_VIEW } from "@/lib/constants";
+import { Separator } from "@/components/ui/separator";
 type TTableViews = "Board" | "List" | "Calendar";
-const tableViews: TTableViews[] = ["Board", "List", "Calendar"];
-const defaultView = "List" as const;
+const tableViews: {
+  icon: ForwardRefExoticComponent<
+    Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
+  >;
+  label: TTableViews;
+}[] = [
+  { label: "Board", icon: Columns2Icon },
+  { label: "List", icon: ListIcon },
+  { label: "Calendar", icon: CalendarIcon },
+];
+const DefaultView = "List" as const;
 export default function TableViews() {
   const [active, setActive] = useState<string>();
 
@@ -22,7 +44,7 @@ export default function TableViews() {
     if (view) {
       console.log("updated active from storage: ", view);
       setActive(view);
-    } else setActive(defaultView);
+    } else setActive(DefaultView);
   }, []);
 
   useEffect(() => {
@@ -35,22 +57,35 @@ export default function TableViews() {
     setActive(value);
   }
   return (
-    <section>
+    <div className="flex items-center gap-x-4">
       <ul className="flex">
-        {tableViews.map((v) => (
-          <li key={v}>
+        {tableViews.map(({ icon: Icon, label }) => (
+          <li key={label}>
             <Button
               variant={"ghost"}
-              className={cn("border-b-4 border-transparent rounded-none", {
-                "border-b-neutral-950": active === v,
-              })}
-              onClick={() => handleClick(v)}
+              className={cn(
+                "gap-x-2 rounded-none border-b-4 border-transparent px-2 font-semibold",
+                {
+                  "border-b-neutral-950": active === label,
+                  "text-black/70": active !== label,
+                },
+              )}
+              onClick={() => handleClick(label)}
             >
-              {v}
+              <Icon className="size-4" />
+              {label}
             </Button>
           </li>
         ))}
       </ul>
-    </section>
+      <Separator orientation="vertical" className="h-4 w-[1px]" />
+      <Button
+        variant={"ghost"}
+        className="gap-x-2 rounded-none px-2 text-black/70"
+      >
+        <PlusIcon className="size-4" />
+        Views
+      </Button>
+    </div>
   );
 }
