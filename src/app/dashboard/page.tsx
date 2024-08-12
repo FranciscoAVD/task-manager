@@ -1,5 +1,7 @@
 //Preliminary layout by Frank
+// Imported the filters component - Smiley
 
+import Filters from "@/components/filters/filters";
 import { Sidebar } from "./_components/sidebar";
 
 export default function DashboardPage() {
@@ -15,7 +17,9 @@ export default function DashboardPage() {
           <section className="border">Table Tiews</section>
         </section>
         <section>
-          <section className="border">Filters</section>
+          <section className="border">
+            <Filters />
+          </section>
           Tables
         </section>
       </section>
