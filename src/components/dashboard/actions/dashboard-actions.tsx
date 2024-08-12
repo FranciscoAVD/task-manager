@@ -18,7 +18,7 @@ export default function DashboardActions() {
       <ul className="flex gap-x-2">
         {actions.map(({ icon: Icon, label }) => (
           <li key={label}>
-            <Button variant={"ghost"} className="gap-x-2 px-2 rounded-none">
+            <Button variant={"ghost"} className="gap-x-2 px-2">
               <Icon className="size-4" />
               {label}
             </Button>
