@@ -64,7 +64,7 @@ export default function TableViews() {
             <Button
               variant={"ghost"}
               className={cn(
-                "gap-x-2 rounded-none border-b-4 border-transparent px-2 font-semibold",
+                "gap-x-2 border-b-4 border-transparent px-2 font-semibold",
                 {
                   "border-b-neutral-950": active === label,
                   "text-black/70": active !== label,
@@ -81,7 +81,7 @@ export default function TableViews() {
       <Separator orientation="vertical" className="h-4 w-[1px]" />
       <Button
         variant={"ghost"}
-        className="gap-x-2 rounded-none px-2 text-black/70"
+        className="gap-x-2 px-2 text-black/70"
       >
         <PlusIcon className="size-4" />
         Views
