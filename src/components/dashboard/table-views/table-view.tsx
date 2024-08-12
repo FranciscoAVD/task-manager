@@ -64,7 +64,7 @@ export default function TableViews() {
             <Button
               variant={"ghost"}
               className={cn(
-                "gap-x-2 border-b-4 border-transparent px-2 font-semibold",
+                "gap-x-2 px-2 border-b-4 border-transparent rounded-none",
                 {
                   "border-b-neutral-950": active === label,
                   "text-black/70": active !== label,
