@@ -1,1 +1,3 @@
-export const LOCAL_STORAGE_TABLE_VIEW = "ACTIVE_TABLE_VIEW" as const
+export const LOCAL_STORAGE_TABLE_VIEW = "ACTIVE_TABLE_VIEW" as const;
+
+export const LOCAL_STORAGE_FILTERS = "APPLIED_FILTERS" as const;

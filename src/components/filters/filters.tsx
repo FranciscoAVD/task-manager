@@ -112,8 +112,8 @@ function FilterItem({ applied, Icon, label, onClick }: FilterItemProps) {
       <Button
         variant="ghost"
         className={cn(
-          "w-full justify-start gap-x-2 rounded-full border font-normal text-purple-900/70 hover:bg-purple-900/10 hover:text-purple-900/70",
-          { "bg-purple-900/20": applied },
+          "w-full justify-start gap-x-2 rounded-full border font-normal",
+          { "": applied },
         )}
         onClick={onClick}
       >
