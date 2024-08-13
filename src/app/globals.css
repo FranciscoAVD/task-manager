@@ -1,3 +1,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-main {
+  @apply bg-[#5C6B73]/10;
+}
+
+.bg-sidebar {
+  @apply bg-[#253237]/10;
+}
+
+.text-primary {
+  @apply text-4xl font-medium text-[#253237] hover:text-[#9DB4C0];
+}
+
+.text-primary-selected {
+  @apply text-4xl font-medium text-[#9DB4C0] hover:text-[#9DB4C0]/80;
+}
+
+.text-secondary {
+  @apply text-3xl text-[#253237]/60 hover:text-[#253237]/80;
+}
+
+.text-secondary-selected {
+}
+
+.text-normal {
+  @apply text-lg font-light text-[#253237]/80;
+}
+
+.text-normal-selected {
+  @apply text-lg text-[#9DB4C0];
+}
+
+.button-accent {
+  @apply rounded-lg bg-[#5C6B73]/70 p-3 text-white/90 transition hover:bg-[#5C6B73]/90;
+}
+
+.button-sidebar {
+  @apply text-normal rounded-lg p-3 hover:bg-[#5C6B73]/10;
+}
+
+.button-sidebar-selected {
+  @apply text-normal rounded-lg bg-[#9DB4C0]/70 p-3 hover:cursor-default;
+}
+
+.filter-button {
+  @apply text-normal rounded-full border border-[#5C6B73]/20 p-3 hover:bg-[#5C6B73]/10;
+}
+
+.filter-button-selected {
+  @apply text-normal rounded-full border border-[#5C6B73]/20 bg-[#9DB4C0]/70 p-3 hover:bg-[#9DB4C0]/90;
+}
+
+.button-normal {
+  @apply text-secondary rounded-lg p-3 hover:bg-[#5C6B73]/10;
+}
+
+/* E0FBFC LIGHT CYAN */
+/* C2DFE3 LIGHT BLUE */
+/* 9DB4C0 CADET GRAY */
+/* 5C6B73 PAYNE'S GRAY */
+/* 253237 GUNMETAL FOR DARKEST TEXT AND CHANGE OPACITY FOR BACKGROUND */
